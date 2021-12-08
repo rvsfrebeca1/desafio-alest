@@ -4,14 +4,16 @@ const useStyles = makeStyles({
     root: {
         maxWidth: '15rem',
         padding: 10,
-        maxHeight: '20rem'
+        maxHeight: '20rem',
+        backgroundColor: '#23222A'
 
     },
     content: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: 0,
+        padding: 0
+
     },
     button: {
         backgroundColor: '#2237CB',
@@ -25,6 +27,10 @@ const useStyles = makeStyles({
         width: '10rem',
         borderRadius: '100%'
     },
+    font: {
+        color: '#5F5C5D',
+        fontWeight: 'bold'
+    }
 });
 
 

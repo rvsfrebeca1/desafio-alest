@@ -7,6 +7,10 @@ export default function UseDados() {
     const [produtos, setProdutos] = useState([])
     const [removendo, setRemovendo] = useState(false)
     const [alert, setAlert] = useState(false)
+    const [editando, setEditando] = useState(false)
+    const [nome, setNome] = useState("")
+    const [valor, setValor] = useState("")
+    const [descricao, setDescricao] = useState("")
 
 
     async function buscarProdutos() {
@@ -26,6 +30,14 @@ export default function UseDados() {
         setRemovendo,
         buscarProdutos,
         alert,
-        setAlert
+        setAlert,
+        editando,
+        setEditando,
+        nome,
+        setNome,
+        valor,
+        setValor,
+        descricao,
+        setDescricao
     }
 }

@@ -15,10 +15,21 @@ function useRequisicoes() {
 
     }
 
+    async function editarProduto(body, id) {
+        fetch(`http://localhost:8000/produtos/atualizar/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+    }
+
 
 
     return {
-        removerProduto
+        removerProduto,
+        editarProduto
     }
 }
 

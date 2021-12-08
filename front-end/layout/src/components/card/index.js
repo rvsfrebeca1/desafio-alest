@@ -13,15 +13,16 @@ import perfilTeste from '../../assets/perfilTeste.png'
 import './style.js'
 import UseConsumirDados from '../../hooks/useConsumir';
 import useRequisicoes from '../../hooks/useRequisicoes.js';
+import ModalEditar from '../modalEditar/index.js';
 
 export default function CardItem({ item }) {
-    const { alert, setAlert } = UseConsumirDados()
+    const { alert, setAlert, setEditando, setNome, setValor, setDescricao } = UseConsumirDados()
     const { removerProduto } = useRequisicoes()
     const { nome, valor } = item.produto
 
     const classes = useStyles();
 
-    async function handleClick(item) {
+    async function handleClickRemover(item) {
         if (window.confirm('Deseja excluir este produto permanentemente')) {
             await removerProduto(item)
             setAlert(!alert)
@@ -29,10 +30,20 @@ export default function CardItem({ item }) {
             return
         }
     }
+
+
+
+    async function handleClickEditar(item) {
+        const { nome, valor, descricao } = item.produto
+        setEditando(item)
+        setNome(nome)
+        setValor(valor)
+        setDescricao(descricao)
+    }
     return (
         <Card className={classes.root}>
             <CardActionArea className={classes.content}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography className={classes.font} gutterBottom variant="h5" component="h2">
                     {nome}
                 </Typography>
 
@@ -43,18 +54,16 @@ export default function CardItem({ item }) {
                 />
                 <CardContent>
 
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography className={classes.font} variant="body2" color="textSecondary" component="p">
                         R$ {(valor / 100).toFixed(2).replace(".", ",")}
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button className={classes.button} size="large" color="primary">
+                <Button onClick={() => handleClickEditar(item)} className={classes.button} size="large" color="primary">
                     <EditIcon />
                 </Button>
-                <Button onClick={() => {
-                    handleClick(item)
-                }} className={classes.button} size="large" color="primary">
+                <Button onClick={() => handleClickRemover(item)} className={classes.button} size="large" color="primary">
                     <DeleteIcon />
                 </Button>
             </CardActions>
