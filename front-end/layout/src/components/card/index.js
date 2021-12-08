@@ -22,9 +22,6 @@ export default function CardItem({ item }) {
     const classes = useStyles();
 
     async function handleClick(item) {
-
-        removerProduto(item)
-
         if (window.confirm('Deseja excluir este produto permanentemente')) {
             await removerProduto(item)
             setAlert(!alert)
