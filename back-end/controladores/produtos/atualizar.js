@@ -10,10 +10,15 @@ async function atualizar(req, res) {
     const dadosValidos = await schema.validate(req.body)
 
 
-    const produtos = db.collection('produtos').doc(req.params.id);
-    await produtos.update(dadosValidos);
 
-    return res.json({ mensagem: "Produto atualizado com sucesso" })
+    try {
+        const produtos = db.collection('produtos').doc(req.params.id);
+        await produtos.update(dadosValidos);
+        return res.json({ mensagem: "Produto atualizado com sucesso" })
+    } catch (error) {
+        return res.status(404).json({ mensagem: "Produto não encontrado" })
+    }
+
 
 
 
