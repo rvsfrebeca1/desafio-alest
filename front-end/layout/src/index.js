@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { ContextoProvider } from './contexts/contexto';
 
 ReactDOM.render(
-  <App />,
+  <ContextoProvider>
+
+    <App />
+  </ContextoProvider>,
   document.getElementById('root')
 );

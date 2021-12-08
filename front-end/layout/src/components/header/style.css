@@ -1,0 +1,15 @@
+.header {
+    background-color: #28272F;
+
+    height: 10%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__title{
+    font-family: 'Cantarell', sans-serif;
+    color: #767A85;
+}
