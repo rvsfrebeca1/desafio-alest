@@ -26,3 +26,56 @@
   gap: 50px;
 
 }
+
+.main__produtos{
+  padding: 30px;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: #312E37;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 50px;
+}
+
+.main__top{
+  display: flex;
+  width: 100%;
+  padding-left: 7%;
+  padding-right: 7%;
+
+  justify-content: space-between;
+}
+
+.main__top__pesquisa{
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+
+.main__top__pesquisar-button {
+  border: none;
+  border-radius: 5px;
+  padding: 9px;
+  color: white;
+  font-family: 'Cantarell', sans-serif;
+  font-weight: bold;
+  background-color: #2038CC;
+}
+
+.main__add-icon{
+  all: unset;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  cursor: pointer;
+  background-color: #2038CC;
+}

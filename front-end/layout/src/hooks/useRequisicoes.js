@@ -25,11 +25,23 @@ function useRequisicoes() {
         })
     }
 
+    async function adicionarProduto(body) {
+        await fetch('http://localhost:8000/produtos/adicionar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+
+    }
+
 
 
     return {
         removerProduto,
-        editarProduto
+        editarProduto,
+        adicionarProduto
     }
 }
 
