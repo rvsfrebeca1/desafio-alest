@@ -1,4 +1,5 @@
-const db = require('../../db')
+const firebase = require('../../db')
+const db = firebase.firestore()
 const yup = require('yup')
 async function atualizar(req, res) {
     const schema = yup.object().shape({

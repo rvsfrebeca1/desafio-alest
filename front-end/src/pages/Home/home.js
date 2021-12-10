@@ -1,16 +1,21 @@
-import './App.css';
-import Header from './components/header/index';
-import CardItem from './components/card';
+import './home.css';
+import Header from '../../components/header/index';
+import CardItem from '../../components/card';
 import { useEffect } from 'react'
-import UseConsumirDados from './hooks/useConsumir';
-import ModalEditar from './components/modalEditar';
+import UseConsumirDados from '../../hooks/useConsumir';
+import ModalEditar from '../../components/modalEditar';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
 import TextField from '@mui/material/TextField';
 import AddIcon from '@material-ui/icons/Add';
+import BlueButton from '../../components/BlueButton';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { useNavigate } from 'react-router-dom'
 
-function App() {
-  const { produtos, buscarProdutos, alert, editando, adicionando, setAdicionando } = UseConsumirDados()
+
+function Home() {
+  const navigate = useNavigate()
+  const { produtos, buscarProdutos, alert, editando, adicionando, setAdicionando, removeUidStorage } = UseConsumirDados()
 
   useEffect(() => {
     buscarProdutos()
@@ -29,10 +34,7 @@ function App() {
 
 
 
-
   return (
-
-
     <div className="App">
       <Header />
       {(editando || adicionando) && <ModalEditar />}
@@ -42,7 +44,7 @@ function App() {
             <TextField
               fullWidth
               size='small'
-              sx={{ marginRight: '60px' }}
+              sx={{ marginRight: '60px', backgroundColor: '#23222A', borderRadius: '9px' }}
               id="input-with-icon-textfield"
               placeholder='Search'
               InputProps={{
@@ -54,10 +56,15 @@ function App() {
               }}
               variant="outlined"
             />
-            <button className='main__top__pesquisar-button'>Pesquisar</button>
+            <BlueButton mensagem="Pesquisar" />
           </div>
 
           <button onClick={() => setAdicionando(true)} className='main__add-icon'><AddIcon /></button>
+          <button onClick={() => {
+            removeUidStorage()
+            navigate("/")
+
+          }} className='main__add-icon'><ExitToAppIcon /></button>
         </div>
         <div className="main__produtos">
           {produtos.map(item => {
@@ -68,8 +75,7 @@ function App() {
       </div>
 
 
-    </div>
-  );
+    </div>)
 }
 
-export default App;
+export default Home

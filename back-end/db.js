@@ -1,11 +1,11 @@
 require('dotenv').config()
-var admin = require("firebase-admin");
+const firebase = require('firebase');
+const config = require('./config')
 
-var serviceAccount = require("./database-desafio-alest-firebase-adminsdk-xzwsl-a2566cd62f.json");
+const db = firebase.initializeApp(config);
 
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-});
 
-const db = admin.firestore()
-module.exports = db
+module.exports = db;
+
+
+

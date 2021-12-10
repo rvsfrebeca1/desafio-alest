@@ -1,5 +1,6 @@
 const yup = require('yup')
-const db = require('../../db')
+const firebase = require('../../db')
+const db = firebase.firestore()
 async function adicionar(req, res) {
     let id = (Math.random() * 10).toFixed(2)
 

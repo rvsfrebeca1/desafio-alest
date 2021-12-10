@@ -4,10 +4,12 @@ const vizualizar = require('./controladores/produtos/vizualizar')
 const adicionar = require('./controladores/produtos/adicionar')
 const atualizar = require('./controladores/produtos/atualizar')
 const remover = require('./controladores/produtos/remover')
+const cadastrar = require('./controladores/usuarios/cadastro')
+const logar = require('./controladores/usuarios/login')
 
 //usuarios
-rota.post('/usuario/cadastro')
-rota.post('/usuario/login')
+rota.post('/usuario/cadastro', cadastrar)
+rota.post('/usuario/login', logar)
 
 //produtos
 rota.get('/produtos/vizualizar', vizualizar)

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import { useLocalStorage } from 'react-use'
+import { useLocalStorage } from 'react-use'
 
 
 export default function UseDados() {
@@ -12,6 +12,11 @@ export default function UseDados() {
     const [valor, setValor] = useState("")
     const [descricao, setDescricao] = useState("")
     const [adicionando, setAdicionando] = useState(false)
+    const [nomeUsuario, setNomeUsuario] = useState("")
+    const [email, setEmail] = useState("")
+    const [senha, setSenha] = useState("")
+    const [erro, setErro] = useState(false)
+    const [uidStorage, setUidStorage, removeUidStorage] = useLocalStorage("uid", "")
 
 
     async function buscarProdutos() {
@@ -41,6 +46,17 @@ export default function UseDados() {
         descricao,
         setDescricao,
         adicionando,
-        setAdicionando
+        setAdicionando,
+        nomeUsuario,
+        setNomeUsuario,
+        email,
+        setEmail,
+        senha,
+        setSenha,
+        erro,
+        setErro,
+        uidStorage,
+        setUidStorage,
+        removeUidStorage
     }
 }

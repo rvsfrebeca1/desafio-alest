@@ -1,4 +1,5 @@
-const db = require('../../db')
+const firebase = require('../../db')
+const db = firebase.firestore()
 async function remover(req, res) {
 
     const produtos = db.collection('produtos').doc(req.params.id);

@@ -1,6 +1,5 @@
 
 
-
 function useRequisicoes() {
 
     async function removerProduto(item) {
@@ -37,11 +36,42 @@ function useRequisicoes() {
     }
 
 
+    async function cadastrarUsuario(body) {
+        const resposta = await fetch('http://localhost:8000/usuario/cadastro', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+
+        const uid = await resposta.json()
+        return uid
+
+
+    }
+
+    async function logarUsuario(body) {
+        const resposta = await fetch('http://localhost:8000/usuario/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+
+        const uid = await resposta.json()
+        return uid
+    }
+
+
 
     return {
         removerProduto,
         editarProduto,
-        adicionarProduto
+        adicionarProduto,
+        cadastrarUsuario,
+        logarUsuario
     }
 }
 

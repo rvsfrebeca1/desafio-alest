@@ -1,0 +1,22 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    height: 100vh;
+}
+
+.login__title {
+    margin-bottom: 50px;
+    font-family: 'Cantarella', sans-serif;
+}
+
+.login__form{
+    display: flex;
+    flex-direction: column;
+
+    width: 30%;
+    gap: 20px;
+}

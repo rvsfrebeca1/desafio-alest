@@ -1,4 +1,5 @@
-const db = require('../../db')
+const firebase = require('../../db')
+const db = firebase.firestore()
 async function vizualizar(req, res) {
     const citiesRef = db.collection('produtos');
     const snapshot = await citiesRef.get();

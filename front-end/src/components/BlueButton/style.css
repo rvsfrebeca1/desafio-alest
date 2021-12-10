@@ -1,0 +1,10 @@
+.blue-button{
+    border: none;
+    border-radius: 5px;
+    padding: 9px;
+    color: white;
+    font-family: 'Cantarell', sans-serif;
+    font-weight: bold;
+    background-color: #2038CC;
+  
+}
