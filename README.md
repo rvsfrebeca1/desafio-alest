@@ -15,7 +15,7 @@
 Antes de iniciar o backend, é necessário abrir o projeto no Firebase, para
 colher as informações do banco de dados. Em seguida renomeie o arquivo ".env.exemple" para ".env" e o preencha com as informações do Firebase (Os dados podem ser encontrados na opção "Configurações do Projeto", na engrenagem ao lado de "Visão Geral do projeto").
 
-Depois disso, navegue pelo terminal até a pasta Back-end e execute os seguintes comandos:
+Depois disso, navegue pelo terminal até a pasta back-end e execute os seguintes comandos:
 
 ```npm install``` para instalar as dependencias do projeto 
 
@@ -26,7 +26,7 @@ depois
 
 # NSTALAÇÃO E INICIALIZAÇÃO (FRONTEND)
 
-Navegue  pelo terminal até a pasta Front-end e execute os seguintes comandos:  
+Navegue  pelo terminal até a pasta front-end e execute os seguintes comandos:  
 
 ```npm install``` para instalar as dependencias do projeto
 
