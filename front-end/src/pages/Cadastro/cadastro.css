@@ -5,11 +5,32 @@
     flex-direction: column;
 
 
+    background-color: #312E37;
+
+
     height: 100vh;
 }
 
+.faca-login {
+    all: unset;
+    color: #7B7A7D;
+    font-family: 'Cantarella', sans-serif;
+
+    margin-top: 20px;
+
+}
+
+
+.faca-cadastro-button{
+    all: unset;
+
+    cursor: pointer;
+
+    color: white;
+}
 .cadastro__title {
     margin-bottom: 50px;
+    color: #7B7A7D;
     font-family: 'Cantarella', sans-serif;
 }
 

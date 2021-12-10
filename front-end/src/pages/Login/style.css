@@ -4,12 +4,28 @@
     justify-content: center;
     flex-direction: column;
 
+    background-color: #312E37;
 
     height: 100vh;
 }
 
+.faca-cadastro {
+    color: #7B7A7D;
+    font-family: 'Cantarella', sans-serif;
+
+    margin-top: 20px;
+}
+.faca-login-button {
+    all: unset;
+
+    cursor: pointer;
+
+    color: white;
+}
+
 .login__title {
     margin-bottom: 50px;
+    color: #7B7A7D;
     font-family: 'Cantarella', sans-serif;
 }
 
@@ -20,3 +36,5 @@
     width: 30%;
     gap: 20px;
 }
+
+

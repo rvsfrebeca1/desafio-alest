@@ -101,6 +101,12 @@ function Login() {
             {erro && <span style={{ color: 'red', fontFamily: 'Cantarella, sans-serif' }}>{erro.mensagem}</span>}
             <BlueButton mensagem="Logar" />
         </form>
+
+        <span className='faca-cadastro'>Não tem login?
+            <button className='faca-cadastro-button' onClick={() => navigate("/cadastro")}>
+                Faça cadastro
+            </button>
+        </span>
     </div>
 }
 
