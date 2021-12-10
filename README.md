@@ -13,7 +13,7 @@
 # INSTALAÇÃO E INICIALIZAÇÃO (BACKEND)
 
 Antes de iniciar o backend, é necessário abrir o projeto no Firebase, para
-colher as informações do banco de dados. renomeie o arquivo ".env.exemple" para ".env" e o preencha com as informações do Firebase (Os dados podem ser encontrados na opção "Configurações do Projeto", na engrenagem ao lado de "Visão Geral do projeto").
+colher as informações do banco de dados. Em seguida renomeie o arquivo ".env.exemple" para ".env" e o preencha com as informações do Firebase (Os dados podem ser encontrados na opção "Configurações do Projeto", na engrenagem ao lado de "Visão Geral do projeto").
 
 Depois disso, navegue pelo terminal até a pasta Back-end e execute os seguintes comandos:
 
