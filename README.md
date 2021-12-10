@@ -3,7 +3,6 @@
 
 | ***TECNOLOGIAS*** |  
 
-* Database:
   * Firestore Database do Firebase
   * NodeJS
   * ReactJS
