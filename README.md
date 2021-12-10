@@ -3,7 +3,7 @@
 
 | ***TECNOLOGIAS*** |  
 
-  * Firestore Database do Firebase
+  * Banco de Dados NoSQL Firestore da Google
   * NodeJS
   * ReactJS
   * Express 
