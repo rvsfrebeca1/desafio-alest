@@ -11,12 +11,13 @@ import AddIcon from '@material-ui/icons/Add';
 import BlueButton from '../../components/BlueButton';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { useNavigate } from 'react-router-dom'
+import useRequisicoes from '../../hooks/useRequisicoes';
 
 
 function Home() {
   const navigate = useNavigate()
   const { produtos, buscarProdutos, alert, editando, adicionando, setAdicionando, removeUidStorage } = UseConsumirDados()
-
+  const { deslogarUsuario } = useRequisicoes()
   useEffect(() => {
     buscarProdutos()
   }, [])
@@ -61,6 +62,8 @@ function Home() {
 
           <button onClick={() => setAdicionando(true)} className='main__add-icon'><AddIcon /></button>
           <button onClick={() => {
+
+            deslogarUsuario()
             removeUidStorage()
             navigate("/")
 

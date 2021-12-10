@@ -64,6 +64,10 @@ function useRequisicoes() {
         return uid
     }
 
+    async function deslogarUsuario() {
+        await fetch('http://localhost:8000/usuario/deslogar')
+    }
+
 
 
     return {
@@ -71,7 +75,8 @@ function useRequisicoes() {
         editarProduto,
         adicionarProduto,
         cadastrarUsuario,
-        logarUsuario
+        logarUsuario,
+        deslogarUsuario
     }
 }
 
